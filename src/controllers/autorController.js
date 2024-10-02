@@ -5,6 +5,7 @@ import { autores } from "../models/Autor.js";
 class AutorController {
 
   static async listarAutores (req, res) {
+    
     try {
       const listaAutores = await autores.find({});
       res.status(200).json(listaAutores);
